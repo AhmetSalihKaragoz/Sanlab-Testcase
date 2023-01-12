@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftHand : MonoBehaviour
+public class LeftHand : Hand
 {
-    // Start is called before the first frame update
-    void Start()
+    private string _hand;
+    protected override void Hold()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        hand = "I am the left hand";
+        base.Hold();
     }
 }

@@ -1,15 +1,16 @@
+using System;
 using UnityEngine;
 public abstract class Hand : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    protected string hand;
+    private void Start()
     {
-        
+        Hold();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    protected virtual void Hold()
     {
-        
+        Debug.Log(hand);
     }
+    
 }
