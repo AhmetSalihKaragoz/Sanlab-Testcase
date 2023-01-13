@@ -1,18 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AttachmentManager : MonoBehaviour
 {
-    [SerializeField] private GameObject attachedPiston;
+    private Dictionary<int, List<Transform>> HeadOrTop;
+    private int index = 0;
 
-    void TurnRendersOn(GameObject attachedPart,Vector3 pos,bool isParent)
-    {
-        var instance = Instantiate(attachedPiston, pos, Quaternion.identity,transform);
-        if (isParent)
-        {
-            
-        }
-    }
-    
 }

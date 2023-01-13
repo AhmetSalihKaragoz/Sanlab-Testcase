@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - IdlePart
-  - MontagedPart
   - Finger
+  - Part
   layers:
   - Default
   - TransparentFX

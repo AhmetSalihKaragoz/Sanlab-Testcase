@@ -4,77 +4,92 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> fitParts;
-    private readonly List<GameObject> _parts = new List<GameObject>();
+    public Vector3 childhoodPosition;
+    [SerializeField] private GameObject parentInAttachedPos;
+    [SerializeField] private GameObject childInAttachedPos;
+    
+
+    private bool isSet;
+    private bool hasShown;
+
+    private GameObject fluParent;
+    private GameObject fluChild;
+    
     private Vector3 screenPoint;
     private Vector3 offset;
-
-
-    private List<Transform> children;
-    private Transform myParent;
-    private Transform myChild;
-
-    private void Start()
-    {
-        myParent = transform.parent;
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            children.Add(transform.GetChild(i));
-        }
-        
-        for (int i = 0; i < myParent.childCount; i++)
-        {
-            _parts.Add(myParent.GetChild(i).gameObject);
-        }
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.transform == gameObject.transform.parent || children.Contains(gameObject.transform))
+        if (other.CompareTag("Part"))
         {
-            Debug.Log("Hello World");
+            if (!hasShown)
+            {
+                if (other.gameObject == parentInAttachedPos)
+                {
+                    hasShown = true;
+                    isSet = true;
+                    // transform.SetParent(other.transform);
+                    // transform.localPosition = childhoodPosition;
+                    ShowFluParts(other.gameObject);
+                }
+                if(other.gameObject == childInAttachedPos)
+                {
+                    hasShown = true;
+                    isSet = true;
+                    // transform.position = other.transform.position;
+                    // other.transform.parent = transform;
+                    // other.transform.localPosition = other.GetComponent<Drag>().childhoodPosition;
+                    ShowFluParts(other.gameObject);
+                }
+            }
         }
+        
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        hasShown = false;
+        fluChild.SetActive(false);
+        fluParent.SetActive(false);
     }
 
     void OnMouseDown()
     {
-        TurnUnfitCollidersOff();
+        isSet = false;
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
- 
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
- 
+            offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
 
     void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-        transform.position = curPosition;
-    }
-
-    private void OnMouseUp()
-    {
-        TurnCollidersOn();
-    }
-
-    private void TurnCollidersOn()
-    {
-        for (int i = 0; i < _parts.Count; i++)
+        if (!isSet)
         {
-            _parts[i].GetComponent<Collider>().isTrigger = true;
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+            transform.position = curPosition;
         }
     }
 
-    void TurnUnfitCollidersOff()
+    void ShowFluParts(GameObject other)
     {
-        for (int i = 0; i < _parts.Count; i++)
+        var transMat = transform.GetComponent<Renderer>().material;
+        var transMatColor = transMat.color;
+        transMatColor.a = 50;
+        if (other.gameObject == parentInAttachedPos)
         {
-            if (!fitParts.Contains(_parts[i]) && _parts[i] != gameObject)
-            {
-                _parts[i].GetComponent<Collider>().isTrigger = false;
-            }
+            fluParent = Instantiate(parentInAttachedPos, other.transform.position, transform.rotation);
+            fluChild = Instantiate(gameObject, childhoodPosition, other.transform.rotation);
+            fluParent.GetComponent<Renderer>().material = transMat;
+            fluChild.GetComponent<Renderer>().material = transMat;
+            fluChild.SetActive(true);
+            fluParent.SetActive(true);
         }
+        if (other.gameObject != childInAttachedPos) return;
+        fluParent = Instantiate(gameObject, other.transform.position, transform.rotation);
+        fluChild = Instantiate(childInAttachedPos, other.GetComponent<Drag>().childhoodPosition, other.transform.rotation); fluParent.GetComponent<Renderer>().material = transMat;
+        fluChild.GetComponent<Renderer>().material = transMat;
+        fluChild.SetActive(true);
+        fluParent.SetActive(true);
     }
 }
