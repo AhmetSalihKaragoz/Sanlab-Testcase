@@ -5,15 +5,24 @@ using UnityEngine;
 public class Drag : MonoBehaviour
 {
     [SerializeField] private List<GameObject> fitParts;
-    private List<GameObject> _parts = new List<GameObject>();
+    private readonly List<GameObject> _parts = new List<GameObject>();
     private Vector3 screenPoint;
     private Vector3 offset;
 
+
+    private List<Transform> children;
     private Transform myParent;
+    private Transform myChild;
 
     private void Start()
     {
         myParent = transform.parent;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            children.Add(transform.GetChild(i));
+        }
+        
         for (int i = 0; i < myParent.childCount; i++)
         {
             _parts.Add(myParent.GetChild(i).gameObject);
@@ -22,7 +31,7 @@ public class Drag : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("IdlePart"))
+        if (other.gameObject.transform == gameObject.transform.parent || children.Contains(gameObject.transform))
         {
             Debug.Log("Hello World");
         }
