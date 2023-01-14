@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Finger
   - Part
+  - TriggerPoint
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - 1
+  - 2
   - 
   - 
   - 

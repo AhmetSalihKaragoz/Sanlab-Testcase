@@ -6,7 +6,33 @@ using UnityEngine;
 
 public class AttachmentManager : MonoBehaviour
 {
-    private Dictionary<int, List<Transform>> HeadOrTop;
-    private int index = 0;
+    public static AttachmentManager Instance;
+    private int _attachmentTurn;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public int AttachmentOrder()
+    {
+        return _attachmentTurn;
+    }
+
+    public void IncreaseAttachmentOrder()
+    {
+        _attachmentTurn++;
+    }
+
+    public void DecereaseAttachmentOrder()
+    {
+        _attachmentTurn--;
+    }
 }
