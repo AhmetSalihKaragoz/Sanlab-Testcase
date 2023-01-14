@@ -13,7 +13,8 @@ public class Drag : MonoBehaviour
         if (!isOnMontage)
         {
             screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-            offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+            offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3
+                (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
         }
     }
 

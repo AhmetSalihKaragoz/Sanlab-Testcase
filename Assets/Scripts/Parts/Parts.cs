@@ -1,32 +1,44 @@
-using System;
+using DG.Tweening;
 using UnityEngine;
 public abstract class Parts : MonoBehaviour
 {
     [SerializeField] protected GameObject triggerPoint;
-    [SerializeField] protected GameObject myAttachedSelf;
+    [SerializeField] protected Transform myAttachmentPoint;
 
     protected bool isAttached;
-
-    public void OnTriggerEnter(Collider other)
+    
+    protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("TriggerPoint") && other.GetComponent<Collider>() == triggerPoint.GetComponent<Collider>())
+        if (IsFit(other.gameObject)) 
         {
-            MontageChain();
+            if (!isAttached)
+            {
+                Attach();
+                TurnOffDrag();
+            }
         }
-        
     }
-
-    protected virtual void MontageChain() {
-        
+    
+    protected virtual void Attach()
+    {
+        var sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(myAttachmentPoint.transform.position, 0.5f)).OnComplete(() =>
+        {
+            isAttached = true;
+            TurnOnDrag();
+        });
     }
-
-    protected abstract void Move();
     protected void TurnOnDrag()
     {
         gameObject.GetComponent<Drag>().isOnMontage = false;
     }
-    protected void TurnOffDrag()
+
+    private void TurnOffDrag()
     {
         gameObject.GetComponent<Drag>().isOnMontage = true;
+    }
+    protected virtual bool IsFit(GameObject other)
+    {
+        return other.CompareTag("TriggerPoint") && other.GetComponent<Collider>() == triggerPoint.GetComponent<Collider>();
     }
 }

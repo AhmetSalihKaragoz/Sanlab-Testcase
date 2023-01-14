@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
+  myAttachmentPoint: {fileID: 0}
 --- !u!1 &299479218207023743
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
+  myAttachmentPoint: {fileID: 0}
 --- !u!1 &4309718068137140733
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
+  myAttachmentPoint: {fileID: 0}
 --- !u!1 &6266912641608379965
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
+  myAttachmentPoint: {fileID: 0}
 --- !u!1 &6744584302716561710
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +803,6 @@ GameObject:
   - component: {fileID: 2941283527177171687}
   - component: {fileID: 7972764331189392145}
   - component: {fileID: 945732817}
-  - component: {fileID: 1543083168}
   m_Layer: 0
   m_Name: ScrewRight
   m_TagString: Part
@@ -919,20 +918,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1543083168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6744584302716561710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe43adb5d102a94a997744c3741216a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
 --- !u!1 &6885662391913748051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1061,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
+  myAttachmentPoint: {fileID: 0}
+  triggerPoints: []
+  myAttachmentPoints: []
 --- !u!1 &6944344059401746026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPoint: {fileID: 0}
-  myAttachedSelf: {fileID: 0}
+  myAttachmentPoint: {fileID: 0}
 --- !u!1 &8307633982644200718
 GameObject:
   m_ObjectHideFlags: 0
