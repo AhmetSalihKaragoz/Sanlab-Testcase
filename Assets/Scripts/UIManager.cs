@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using DG.Tweening;
 using UnityEngine;
 using Image = UnityEngine.UI.Image;
@@ -12,7 +8,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Image image;
+    [SerializeField] private RawImage image;
     public static UIManager Instance;
     private void Awake()
     {
@@ -29,12 +25,12 @@ public class UIManager : MonoBehaviour
 
     public void MovePanelImageOnComplete()
     {
-        image.rectTransform.DOAnchorPosX(0, 1.5f);
+        image.rectTransform.DOAnchorPosX(0, 2f);
     }
     
     public void RestartLevel()
     {
-        image.rectTransform.position = new Vector3(0, 0, 0);
+        image.rectTransform.DOAnchorPosX(-750, 2f);
         AttachmentManager.Instance.ResetAttachmentTurn();
         SceneManager.LoadScene(0);
     }
