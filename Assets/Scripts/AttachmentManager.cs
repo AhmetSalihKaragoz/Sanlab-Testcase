@@ -26,11 +26,20 @@ public class AttachmentManager : MonoBehaviour
     public void IncreaseAttachmentOrder()
     {
         _attachmentTurn++;
+        if (_attachmentTurn > 7)
+        {
+            UIManager.Instance.MovePanelImageOnComplete();
+        }
     }
 
     public void DecereaseAttachmentOrder()
     {
         
         _attachmentTurn--;
+    }
+
+    public void ResetAttachmentTurn()
+    {
+        _attachmentTurn = 0;
     }
 }

@@ -3,13 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e1aae0e3-31e3-48ff-b7a1-044accdb6f72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sanlab-Testcase/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sanlab-Testcase/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AttachedPiston.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AttachedPiston.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnAttachedPiston.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnAttachedPiston.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CinemachineController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CinemachineController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttachmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttachmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Parts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Parts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Screw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Screw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/background.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/background.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/../Rock Gathering/Assets/_Project/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AttachmentManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Drag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,7 +91,7 @@
       <workItem from="1673601781196" duration="14066000" />
       <workItem from="1673620640340" duration="10480000" />
       <workItem from="1673636214273" duration="2035000" />
-      <workItem from="1673684901203" duration="26686000" />
+      <workItem from="1673684901203" duration="31646000" />
     </task>
     <servers />
   </component>

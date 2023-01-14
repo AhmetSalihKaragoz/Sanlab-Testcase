@@ -16,7 +16,7 @@ public abstract class Parts : MonoBehaviour
 
     public bool isAttached;
 
-    private bool isTweening;
+    private bool _isTweening;
     
     private bool isItOnCorrectVolumeOnMouseDrag;
 
@@ -49,7 +49,7 @@ public abstract class Parts : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("TriggerPoint")) return;
-        if (isTweening) return;
+        if (_isTweening) return;
         if (!IsCorrectAttachmentPosition(other.gameObject)) return;
         SetSilhouetteState(false);
             activeAttachmentPoint = null;
@@ -68,14 +68,14 @@ public abstract class Parts : MonoBehaviour
 
     public void Attach()
     {
-        isTweening = true;
+        _isTweening = true;
         SetSilhouetteState(false);
         myCollider.enabled = false;
         activeAttachmentPoint.GetComponent<AttachmentPoint>().IsUsed = true;
         var sequence = SetAnimationSequence();
         sequence.OnComplete(() =>
         {
-            isTweening = false;
+            _isTweening = false;
             myCollider.enabled = true;
             isAttached = true;
         });
