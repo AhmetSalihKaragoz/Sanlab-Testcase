@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199131307596852210}
   m_LocalRotation: {x: 0.70710665, y: -0, z: -0, w: 0.7071069}
-  m_LocalPosition: {x: -0.1614, y: -0.1031, z: 0}
+  m_LocalPosition: {x: 0.317, y: 0.166, z: -0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299479218207023743}
   m_LocalRotation: {x: -0.7071069, y: -0.000000059604638, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.1031, y: 0.1382, z: -0.0134}
+  m_LocalPosition: {x: 0.242, y: 0.144, z: -0.013}
   m_LocalScale: {x: 100, y: 99.999985, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -323,7 +323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2283680228803887588}
   m_LocalRotation: {x: -0.7071069, y: -0.000000014901161, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.156, y: 0.121, z: 0}
   m_LocalScale: {x: 100, y: 99.99998, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -568,7 +568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6064362555266864399}
   m_LocalRotation: {x: -0.7071069, y: -0.000000014901161, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -0.2, y: 0.07, z: 0}
+  m_LocalPosition: {x: 0.237, y: 0.101, z: 0}
   m_LocalScale: {x: 100, y: 99.99998, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -715,7 +715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6266912641608379965}
   m_LocalRotation: {x: -0.7071069, y: -0.000000029802319, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.0009805119, y: -0.1932, z: -0.00003007986}
+  m_LocalPosition: {x: 0.322, y: 0.075, z: -0}
   m_LocalScale: {x: 100, y: 99.99998, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -845,8 +845,8 @@ GameObject:
   - component: {fileID: 7564262729508306279}
   - component: {fileID: 7972764331189392145}
   - component: {fileID: 945732817}
-  - component: {fileID: 1543083168}
   - component: {fileID: 5802910176368456016}
+  - component: {fileID: 1041662873}
   m_Layer: 0
   m_Name: ScrewRight
   m_TagString: Part
@@ -862,7 +862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6744584302716561710}
   m_LocalRotation: {x: -0.7071069, y: -0.00000004470348, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.1676, y: -0.1389, z: 0}
+  m_LocalPosition: {x: 0.387, y: 0.097, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -947,25 +947,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1543083168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6744584302716561710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba81332bfc3d3347bb808a4ad3e833e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttachmentPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  myAttachmentOrder: 6
-  silhouette: {fileID: 0}
-  activeAttachmentPoint: {fileID: 0}
-  isAttached: 0
 --- !u!136 &5802910176368456016
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -980,6 +961,25 @@ CapsuleCollider:
   m_Height: 0.0005
   m_Direction: 2
   m_Center: {x: 0, y: -2.0625668e-11, z: 0}
+--- !u!114 &1041662873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744584302716561710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a200eb02acafa014b950114aff26c718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAttachmentPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  myAttachmentOrder: 6
+  silhouette: {fileID: 0}
+  activeAttachmentPoint: {fileID: 0}
+  isAttached: 0
 --- !u!1 &6885662391913748051
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,8 +993,8 @@ GameObject:
   - component: {fileID: 6560698445352817918}
   - component: {fileID: 1857923400947441607}
   - component: {fileID: 1356511035}
-  - component: {fileID: 636531185}
   - component: {fileID: 956090060002531761}
+  - component: {fileID: 482587155}
   m_Layer: 0
   m_Name: ScrewLeft
   m_TagString: Part
@@ -1010,7 +1010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885662391913748051}
   m_LocalRotation: {x: -0.7071069, y: -0.00000004470348, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.1011, y: -0.1389, z: 0}
+  m_LocalPosition: {x: 0.417, y: 0.095, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1095,25 +1095,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &636531185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885662391913748051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba81332bfc3d3347bb808a4ad3e833e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttachmentPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  myAttachmentOrder: 6
-  silhouette: {fileID: 0}
-  activeAttachmentPoint: {fileID: 0}
-  isAttached: 0
 --- !u!136 &956090060002531761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1128,6 +1109,25 @@ CapsuleCollider:
   m_Height: 0.0005
   m_Direction: 2
   m_Center: {x: 0, y: -2.0625668e-11, z: 0}
+--- !u!114 &482587155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885662391913748051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a200eb02acafa014b950114aff26c718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAttachmentPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  myAttachmentOrder: 6
+  silhouette: {fileID: 0}
+  activeAttachmentPoint: {fileID: 0}
+  isAttached: 0
 --- !u!1 &6944344059401746026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,7 +1198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7716677306461464028}
   m_LocalRotation: {x: -0.7071069, y: -0.000000014901161, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -0.1622, y: -0.158, z: 0}
+  m_LocalPosition: {x: 0.32, y: 0.107, z: 0}
   m_LocalScale: {x: 100, y: 99.99998, z: 99.99998}
   m_ConstrainProportionsScale: 0
   m_Children: []

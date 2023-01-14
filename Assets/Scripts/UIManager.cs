@@ -14,8 +14,6 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private Image image;
     public static UIManager Instance;
-    private int _attachmentTurn;
-
     private void Awake()
     {
         if (Instance == null)
@@ -31,15 +29,7 @@ public class UIManager : MonoBehaviour
 
     public void MovePanelImageOnComplete()
     {
-        var lerpDuration = 3f;
-        var timeElapsed = 0f;
-        var imageRectTransform = image.GetComponent<RectTransform>();
-        var goalPos = new Vector3(imageRectTransform.anchoredPosition.x+750, imageRectTransform.anchoredPosition.y, 0);
-        while (timeElapsed < lerpDuration)
-        {
-            imageRectTransform.anchoredPosition = Vector3.Lerp(imageRectTransform.anchoredPosition, goalPos, timeElapsed/lerpDuration);
-            timeElapsed += Time.deltaTime;
-        }
+        image.rectTransform.DOAnchorPosX(0, 1.5f);
     }
     
     public void RestartLevel()
