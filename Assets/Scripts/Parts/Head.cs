@@ -1,24 +1,22 @@
 using DG.Tweening;
 public class Head : Parts
 {
-    public override void MontageChain()
+    protected override void MontageChain()
     {
         if (!isAttached)
         {
             TurnOffDrag();
-            var sequence = DOTween.Sequence();
-            sequence.Append(transform.DOMove(myAttachedSelf.transform.position, 0.5f));
-            isAttached = true;
+            Move();
         }
     }
 
-    protected override void TurnOnDrag()
+    protected override void Move()
     {
-        gameObject.GetComponent<Drag>().isOnMontage = false;
-    }
-
-    protected override void TurnOffDrag()
-    {
-        gameObject.GetComponent<Drag>().isOnMontage = true;
+        var sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(myAttachedSelf.transform.position, 0.5f)).OnComplete(() =>
+        {
+            isAttached = true;
+            TurnOnDrag();
+        });
     }
 }

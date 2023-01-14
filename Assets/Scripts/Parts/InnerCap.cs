@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using DG.Tweening;
 
-public class InnerCap : MonoBehaviour
+public class InnerCap : Parts
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void MontageChain()
     {
-        
+        if (!isAttached)
+        {
+            TurnOffDrag();
+            Move();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Move()
     {
-        
+        var sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(myAttachedSelf.transform.position, 0.5f)).OnComplete(() =>
+        {
+            isAttached = true;
+            TurnOnDrag();
+        });
     }
 }

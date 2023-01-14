@@ -1,6 +1,6 @@
 using DG.Tweening;
 
-public class Cylinder : Parts
+public class Screw : Parts
 {
     protected override void MontageChain()
     {

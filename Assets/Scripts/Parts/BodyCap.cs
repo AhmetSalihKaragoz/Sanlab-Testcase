@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 
-public class Cylinder : Parts
+public class BodyCap : Parts
 {
     protected override void MontageChain()
     {
@@ -10,7 +12,6 @@ public class Cylinder : Parts
             Move();
         }
     }
-
     protected override void Move()
     {
         var sequence = DOTween.Sequence();
