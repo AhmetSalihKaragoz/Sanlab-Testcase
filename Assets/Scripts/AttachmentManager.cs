@@ -19,6 +19,7 @@ public class AttachmentManager : MonoBehaviour
 
     public int GetCurrentAttachmentOrder()
     {
+        if (_attachmentTurn >= 6) return 6;
         return _attachmentTurn;
     }
 
@@ -29,6 +30,7 @@ public class AttachmentManager : MonoBehaviour
 
     public void DecereaseAttachmentOrder()
     {
+        
         _attachmentTurn--;
     }
 }

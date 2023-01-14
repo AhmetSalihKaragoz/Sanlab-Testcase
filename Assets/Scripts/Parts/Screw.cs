@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class Screw : Parts
 {
-    public override Sequence SetAnimationSequence()
-    {
-        return base.SetAnimationSequence();
-    }
+
 }

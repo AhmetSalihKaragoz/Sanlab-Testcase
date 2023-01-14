@@ -8,13 +8,17 @@ public abstract class Parts : MonoBehaviour
 
     [SerializeField] private List<Transform> myAttachmentPoints;
 
-    [SerializeField] private int myAttachmentOrder;
+    public int myAttachmentOrder;
 
     [SerializeField] private GameObject silhouette;
 
-    [HideInInspector] public AttachmentPoint ActiveAttachmentPoint;
+    public AttachmentPoint activeAttachmentPoint;
+
+    public bool isAttached;
+
+    private bool isTweening;
     
-    private bool IsItOnCorrectVolumeOnMouseDrag;
+    private bool isItOnCorrectVolumeOnMouseDrag;
 
     private Vector3 _startingPos;
     private Quaternion _startingRot;
@@ -38,24 +42,17 @@ public abstract class Parts : MonoBehaviour
             && isThisPointUsed == false)
         {
             SetSilhouetteState(true);
-            ActiveAttachmentPoint = other.GetComponent<AttachmentPoint>();
+            activeAttachmentPoint = other.GetComponent<AttachmentPoint>();
         }
-        else
-        {
-            SetSilhouetteState(false);
-            ActiveAttachmentPoint = null;
-        }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("TriggerPoint")) return;
-        if (IsCorrectAttachmentPosition(other.gameObject))
-        {
-            SetSilhouetteState(false);
-            ActiveAttachmentPoint = null;
-        }
+        if (isTweening) return;
+        if (!IsCorrectAttachmentPosition(other.gameObject)) return;
+        SetSilhouetteState(false);
+            activeAttachmentPoint = null;
     }
 
     public void ReturnStartingPosition()
@@ -71,15 +68,19 @@ public abstract class Parts : MonoBehaviour
 
     public void Attach()
     {
+        isTweening = true;
         SetSilhouetteState(false);
         myCollider.enabled = false;
-        ActiveAttachmentPoint.GetComponent<AttachmentPoint>().IsUsed = true;
+        activeAttachmentPoint.GetComponent<AttachmentPoint>().IsUsed = true;
         var sequence = SetAnimationSequence();
         sequence.OnComplete(() =>
         {
+            isTweening = false;
             myCollider.enabled = true;
+            isAttached = true;
         });
         sequence.Play();
+        AttachmentManager.Instance.IncreaseAttachmentOrder();
     }
 
     private bool IsCorrectAttachmentPosition(GameObject other)
@@ -89,13 +90,13 @@ public abstract class Parts : MonoBehaviour
 
     private void SetSilhouetteState(bool isActive)
     {
-        IsItOnCorrectVolumeOnMouseDrag = isActive;
+        isItOnCorrectVolumeOnMouseDrag = isActive;
         silhouette.SetActive(isActive);
     }
 
     public virtual Sequence SetAnimationSequence()
     {
-        var wayPointList = ActiveAttachmentPoint.GetComponentsInChildren<Transform>();
+        var wayPointList = activeAttachmentPoint.GetComponentsInChildren<Transform>();
         Debug.Log(wayPointList.Length);
         Debug.Log(wayPointList[0].name);
         var sequence = DOTween.Sequence();
@@ -104,5 +105,15 @@ public abstract class Parts : MonoBehaviour
             sequence.Append(transform.DOMove(wayPointList[i].position, 0.5f));
         }
         return sequence;
+    }
+
+    public void Detach()
+    {
+        AttachmentManager.Instance.DecereaseAttachmentOrder();
+        if (activeAttachmentPoint != null)
+        {
+            activeAttachmentPoint.IsUsed = false;
+            isAttached = false;
+        }
     }
 }
