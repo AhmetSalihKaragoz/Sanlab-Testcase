@@ -12,7 +12,7 @@ public abstract class Parts : MonoBehaviour
 
     [SerializeField] private GameObject silhouette;
 
-    public AttachmentPoint activeAttachmentPoint;
+    [HideInInspector] public AttachmentPoint activeAttachmentPoint;
 
     public bool isAttached;
 
@@ -97,8 +97,6 @@ public abstract class Parts : MonoBehaviour
     public virtual Sequence SetAnimationSequence()
     {
         var wayPointList = activeAttachmentPoint.GetComponentsInChildren<Transform>();
-        Debug.Log(wayPointList.Length);
-        Debug.Log(wayPointList[0].name);
         var sequence = DOTween.Sequence();
         for (int i = 1; i < wayPointList.Length; i++)
         {

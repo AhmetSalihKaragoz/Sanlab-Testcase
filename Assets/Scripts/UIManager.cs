@@ -48,7 +48,6 @@ public class UIManager : MonoBehaviour
         AttachmentManager.Instance.ResetAttachmentTurn();
         SceneManager.LoadScene(0);
     }
-
-    // ReSharper disable Unity.Performan
+    
 
 }
