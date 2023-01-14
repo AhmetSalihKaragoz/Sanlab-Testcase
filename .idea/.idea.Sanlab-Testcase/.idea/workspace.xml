@@ -3,18 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="e1aae0e3-31e3-48ff-b7a1-044accdb6f72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sanlab-Testcase/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sanlab-Testcase/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnAttachedPiston.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnAttachedPiston.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_basecolor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_basecolor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_emission.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Spotlight Materials/Spotlight_roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Spotlight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Spotlight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AttachedPiston.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AttachedPiston.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttachmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttachmentManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/BodyCap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/BodyCap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Clips.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Clips.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Cylinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Cylinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Head.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Head.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCapBottom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCapBottom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/BodyCap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/BodyCap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/CheckPointUsed.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/CheckPointUsed.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Clips.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Clips.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Cylinder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Cylinder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Head.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Head.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCapBottom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/InnerCapBottom.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Parts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Parts.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parts/Screw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parts/Screw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/Piston_Albedo_Smoothness.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/Piston_Albedo_Smoothness.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/Piston_Metallic.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/Piston_Metallic.mat.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +114,7 @@
       <workItem from="1673601781196" duration="14066000" />
       <workItem from="1673620640340" duration="10480000" />
       <workItem from="1673636214273" duration="2035000" />
-      <workItem from="1673684901203" duration="12663000" />
+      <workItem from="1673684901203" duration="21675000" />
     </task>
     <servers />
   </component>

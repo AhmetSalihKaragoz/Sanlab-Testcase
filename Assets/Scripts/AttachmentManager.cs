@@ -17,7 +17,7 @@ public class AttachmentManager : MonoBehaviour
         }
     }
 
-    public int AttachmentOrder()
+    public int GetCurrentAttachmentOrder()
     {
         return _attachmentTurn;
     }
