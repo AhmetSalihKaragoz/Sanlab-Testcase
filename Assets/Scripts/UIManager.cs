@@ -8,7 +8,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private RawImage image;
+    [SerializeField] private Image image;
     public static UIManager Instance;
     private void Awake()
     {
